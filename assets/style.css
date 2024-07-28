@@ -1,0 +1,22 @@
+body {
+  background-color: #15232D;
+  color: aliceblue;
+}
+
+.posts {
+  display: flex;
+  align-items: center;
+}
+
+.post-card {
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+}
+.post-card .title {
+  display: block;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=style.css.map */

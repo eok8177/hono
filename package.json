@@ -1,14 +1,28 @@
 {
   "name": "hono",
+  "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "sass --watch assets/style.scss:assets/style.css | tsx watch src/index.ts",
+    "lint": "eslint . --ext .ts --fix --ignore-path .gitignore",
+    "start": "sass assets/style.scss:assets/style.css && tsx src/index.ts",
+    "db:generate": "drizzle-kit generate:mysql",
+    "db:migrate": "tsx schema/migrate.ts",
+    "db:drop": "drizzle-kit drop",
+    "build": "tsc"
   },
   "dependencies": {
     "@hono/node-server": "^1.12.0",
+    "@prisma/client": "^5.17.0",
     "hono": "^4.5.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
+    "@hono/eslint-config": "^0.0.6",
+    "@types/node": "^20.14.12",
+    "sass": "^1.77.8",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20.0.0 <23.0.0"
   }
 }
