@@ -1,6 +1,5 @@
 {
   "name": "hono",
-  "type": "module",
   "scripts": {
     "dev": "sass --watch assets/style.scss:assets/style.css | tsx watch src/index.ts",
     "lint": "eslint . --ext .ts --fix --ignore-path .gitignore",
@@ -8,7 +7,7 @@
     "db:generate": "drizzle-kit generate:mysql",
     "db:migrate": "tsx schema/migrate.ts",
     "db:drop": "drizzle-kit drop",
-    "build": "tsc"
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --minify"
   },
   "dependencies": {
     "@hono/node-server": "^1.12.0",
@@ -18,6 +17,8 @@
   "devDependencies": {
     "@hono/eslint-config": "^0.0.6",
     "@types/node": "^20.14.12",
+    "esbuild": "^0.23.0",
+    "htmx.org": "^2.0.1",
     "sass": "^1.77.8",
     "tsx": "^4.16.2",
     "typescript": "^5.5.4"

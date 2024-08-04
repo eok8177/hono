@@ -1,18 +1,18 @@
 body {
-    background-color: #15232D;
-    color: aliceblue;
+  background-color: #15232d;
+  color: aliceblue;
 }
 .posts {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .post-card {
-    border: 1px solid;
-    padding: 10px;
-    margin: 10px;
-    .title {
-        display: block;
-        text-decoration: none;
-        font-weight: bolder;
-    }
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  .title {
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+  }
 }

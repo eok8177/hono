@@ -7,6 +7,10 @@ npm run dev
 open http://localhost:3000
 ```
 
+npm install @prisma/client
+
+npm run build
+pm2 "node dist/index.js"
 
 ---------------------------------
 ## Prisma https://www.prisma.io/docs/orm/prisma-migrate/getting-started

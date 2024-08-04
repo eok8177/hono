@@ -5,7 +5,6 @@ import { serveStatic } from '@hono/node-server/serve-static'
 import { HomePage } from './views/home'
 import { PostPage } from './views/post'
 
-
 const app = new Hono()
 
 app.use('/assets/*', serveStatic({ root: './' }))
@@ -17,12 +16,10 @@ app.get('/posts/:id', (c) => {
   return c.html(PostPage(id))
 })
 
-
-
 const port = 3000
 console.log(`Server is running on port ${port}`)
 
 serve({
   fetch: app.fetch,
-  port
+  port,
 })

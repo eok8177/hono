@@ -1,10 +1,10 @@
 import { html } from 'hono/html'
 
 interface Header {
-  title: string;
-  description: string;
-  image: string;
-  children?: any;
+  title: string
+  description: string
+  image: string
+  children?: any
 }
 
 export const Layout = (props: Header) => html`
